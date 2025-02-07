@@ -47,7 +47,7 @@ def load_classes(file_path):
             class_names[int(index)] = cleaned_class_name
     return class_names
 
-classes = load_classes('/home/Rena/bootcamp_ds/phase_2/ds-phase-2/nn_project/models/model_2/classes.txt')
+classes = load_classes('../models/model_2/classes.txt')
 
 @st.cache_resource()
 def load_model():
