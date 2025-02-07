@@ -25,6 +25,9 @@ streamlit run app.py
 - **app.py** - основной файл для запуска Streamlit
 - **А так же** - README.md, .devcontainer, .gitignore
 
+## Ссылка на Streamlit
+<a href='https://nn-project.streamlit.app/' target='_blank'>StreamlitApp</a>
+
 ## Авторы
 Илья Крючков, Алина Зарницына, Анатолий Яковлев
 
