@@ -18,7 +18,6 @@ st.write('**Пользователь загружает картинку (или
 uploaded_files = st.file_uploader('Загрузите изображение', type=['png', 'jpg', 'jpeg'], accept_multiple_files=True)
 image_url = st.text_input('Или вставьте ссылку на изображение')
 
-classes = ['dew 💦','fogsmog 💨','frost ❄️','glaze ⛄️','hail 🌨','lightning ⚡️','rain 🌧','rainbow 🌈','rime ❄️','sandstorm 🌪','snow 🌨']
 image = None
 
 if uploaded_files:
@@ -37,7 +36,7 @@ else:
 
 def load_classes(file_path):
     class_names = {}
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding='utf-8') as file:
         for line in file.readlines():
             class_name, index = line.split(': ')
             cleaned_class_name = class_name.replace('_', ' ')
@@ -47,7 +46,7 @@ def load_classes(file_path):
             class_names[int(index)] = cleaned_class_name
     return class_names
 
-classes = load_classes('models/model_2/classes.txt')
+classes = load_classes('../models/model_2/classes.txt')
 
 @st.cache_resource()
 def load_model():
