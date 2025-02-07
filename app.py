@@ -3,27 +3,27 @@ import streamlit as st
 st.title('Добро пожаловать на главную страницу проекта, мастер 🧙‍♂️')
 
 st.markdown(
-    '<h3 style="text-align: center;">Логотип нашей команды! (поменяй)</h3>',
-    unsafe_allow_html=True
-)
-# st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
-# st.image('/home/Rena/bootcamp_ds/phase_2/ds-phase-2/nn_project/images/test_logo.png', width=100)
-# st.markdown("</div>", unsafe_allow_html=True)
-
-st.markdown(
     """
     <style>
-        .logo-container {
-            display: flex;
-            justify-content: center;
+        button[title^=Exit]+div [data-testid=stImage]{
+            test-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
         }
     </style>
-    <div class='logo-container'>
-        <img src='/images/ffile.jpg' width='100'>
-    </div>
-""",
-unsafe_allow_html=True
+    """, unsafe_allow_html=True
 )
+
+st.markdown(
+    '<h3 style="text-align: center;">Логотип нашей команды!</h3>',
+    unsafe_allow_html=True
+)
+left_co, cent_co, last_co = st.columns(3)
+with cent_co:
+    st.image('images/team.jpg', width=300)
+st.write('Да, это горящая видеокарта... Прямо как наши...')
 
 st.markdown("""
 ## Данный проект был создан для демонстрации того, чему мы научились за эту неделю!

@@ -61,7 +61,7 @@ if image:
             prediction = predict(img)
             st.write(f'Предсказанный класс:')
             st.markdown(f"""
-            <h2 style='text-align: center; color: white; font-size: 30px; font-weight: bold; padding: 10px; bolder-radius:10px;'>
+            <h2 style='text-align: center; color:#3262a8; font-size: 30px; font-weight: bold; padding: 10px; bolder-radius:10px;'>
             {classes[prediction.argmax(axis=1).item()]}
             </h2>
             """, unsafe_allow_html=True)
@@ -71,7 +71,7 @@ if image:
         prediction = predict(image)
         st.write(f'Предсказанный класс:')
         st.markdown(f"""
-        <h2 style='text-align: center; color: white; font-size: 30px; font-weight: bold; padding: 10px; bolder-radius:10px;'>
+        <h2 style='text-align: center; color:#3262a8; font-size: 30px; font-weight: bold; padding: 10px; bolder-radius:10px;'>
         {classes[prediction.argmax(axis=1).item()]}
         </h2>
         """, unsafe_allow_html=True)
@@ -80,7 +80,7 @@ if image:
     elapsed_time = end_time - start_time
     st.write('Время выполнения предсказания в секундах:')
     st.markdown(f"""
-    <h3 style='text-align: center; color: white; font-size: 30px; font-weight: bold; padding: 5px; bolder-radius:5px;'>
+    <h3 style='text-align: center; color:#3262a8; font-size: 30px; font-weight: bold; padding: 5px; bolder-radius:5px;'>
     {elapsed_time:.2f}
     </h3>
     """, unsafe_allow_html=True)
