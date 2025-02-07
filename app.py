@@ -19,7 +19,7 @@ st.markdown(
         }
     </style>
     <div class='logo-container'>
-        <img src='/home/Rena/bootcamp_ds/phase_2/ds-phase-2/nn_project/images/ffile.jpg' width='100'>
+        <img src='/images/ffile.jpg' width='100'>
     </div>
 """,
 unsafe_allow_html=True
